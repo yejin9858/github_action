@@ -1,0 +1,21 @@
+
+files:
+  - source:  /
+    destination: /home/ec2/runway
+    overwrite: yes
+
+permissions:
+  - object: /
+    pattern: "**"
+    owner: ec2
+    group: ec2
+
+hooks:
+  AfterInstall:
+    - location: scripts/stop.sh
+      timeout: 60
+      runas: ec2
+  ApplicationStart:
+    - location: scripts/start.sh
+      timeout: 60
+      runas: ec2
