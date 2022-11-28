@@ -1,7 +1,7 @@
 
 files:
   - source:  /
-    destination: /home/ec2/runway
+    destination: /home/ec2-user/runway
     overwrite: yes
 
 permissions:
@@ -12,10 +12,10 @@ permissions:
 
 hooks:
   AfterInstall:
-    - location: scripts/stop.sh
+    - location: /home/ec2-user/stop.sh
       timeout: 60
       runas: ec2
   ApplicationStart:
-    - location: scripts/start.sh
+    - location: /home/ec2-user/start.sh
       timeout: 60
       runas: ec2
