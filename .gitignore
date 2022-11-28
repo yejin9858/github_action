@@ -39,7 +39,6 @@ out/
 
 ### files ###
 application.yml
-KeyService.java
 
 runway-2022-firebase-adminsdk-fivvf-aad047c3b8.json
 
@@ -76,4 +75,3 @@ runway/src/main/resources/application.yml
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
-runway/src/main/java/com/wayrunny/runway/util/ImageURLService.java
